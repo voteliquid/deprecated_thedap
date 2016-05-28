@@ -6,13 +6,13 @@ import tornado.web
 import tornado.wsgi
 import wsgiref.handlers
 
-from views import homepage
+from views import homepage, voting
 
                    
 settings = {
     # Application Settings
     "title": u"rd108",
-    "cookie_secret": "12093b258de35ad7dce5b96a3bdbe9401c3b71c81fa8f0baa442d5f3",
+    "cookie_secret": "12093b258de35ad7dcq5b96a3bdbe9401c3b71c81fa8f0baa442d5f3",
     "template_path": os.path.join(os.path.dirname(__file__), "templates"),
     "static_path": os.path.join(os.path.dirname(__file__), "static"),
     # Configuration
@@ -22,12 +22,8 @@ settings = {
 
 application = tornado.wsgi.WSGIApplication([   
 
-    (r"/schizo_robot", homepage.SchizoRobot),
-    (r"/test", homepage.Test),
-
-
+    (r"/voting", voting.VotingModule),
     (r'.*', homepage.Home)
-
 
 ], **settings)
 
