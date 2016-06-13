@@ -19,3 +19,5 @@ A feedback mechanism should be in place as well, to help the platform and crowd 
 An AI could even be employed to vote on one's behalf by learning how one votes over time, and seek confirmation for upcoming votes in case one does not want to directly vote.
 
 Looking forward to clarifying, refining, collaborating, and realizing a crowdocracy with anyone interested in contributing and participating!
+
+[![Join the chat at https://gitter.im/Crowdocracy/crowdocracy](https://badges.gitter.im/Crowdocracy/crowdocracy.svg)](https://gitter.im/Crowdocracy/crowdocracy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
