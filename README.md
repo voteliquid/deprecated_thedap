@@ -1,3 +1,5 @@
+[![Join the chat at https://gitter.im/Crowdocracy/crowdocracy](https://badges.gitter.im/Crowdocracy/crowdocracy.svg)](https://gitter.im/Crowdocracy/crowdocracy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 The intention of Crowdocracy is to allow people to vote on life-affecting group decisions, with sights on the largest decisions like government elections and tax spending.
 
 One thing that seems broken about our current democratic systems it that they're slow, not subject to evolution, and most importantly don't feel representative of the people's will. Why can't we allow one-person, one-vote to be a reality through digital technology?
@@ -19,5 +21,3 @@ A feedback mechanism should be in place as well, to help the platform and crowd 
 An AI could even be employed to vote on one's behalf by learning how one votes over time, and seek confirmation for upcoming votes in case one does not want to directly vote.
 
 Looking forward to clarifying, refining, collaborating, and realizing a crowdocracy with anyone interested in contributing and participating!
-
-[![Join the chat at https://gitter.im/Crowdocracy/crowdocracy](https://badges.gitter.im/Crowdocracy/crowdocracy.svg)](https://gitter.im/Crowdocracy/crowdocracy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
