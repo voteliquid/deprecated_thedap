@@ -1,3 +1,5 @@
+[![Join the chat at https://gitter.im/Crowdocracy/crowdocracy](https://badges.gitter.im/Crowdocracy/crowdocracy.svg)](https://gitter.im/Crowdocracy/crowdocracy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 The intention of Crowdocracy is to allow people to vote on life-affecting group decisions, with sights on the largest decisions like government elections and tax spending.
 
 One thing that seems broken about our current democratic systems it that they're slow, not subject to evolution, and most importantly don't feel representative of the people's will. Why can't we allow one-person, one-vote to be a reality through digital technology?
