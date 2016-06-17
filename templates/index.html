@@ -1,21 +1,47 @@
 <html>
   <head>
+    <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Athiti"> -->
+    <link rel="stylesheet" type="text/css" href="style/app.css">
   </head>
 
-  <body style="background-color: #D1DEEC; color: #4A4A4A; font-family: HelveticaNeue;">
+  <body>
 
     <div class="WelcomePage">
-      <h1 style="font-size: 26px; line-height: 32px;">Distributed<br/ >
+      <h1>Distributed<br/ >
         Autonomous<br />
         <del>Party</del> BoatyMcBoatface
       </h1>
 
-      <h3 style="font-size: 16px; line-height: 18px;">A 21st century experiment in democracy</h3>
+      <h3>A 21st century experiment in democracy</h3>
 
-      <button style="font-size: 16.95px;color: #4A90E2;line-height: 20px;border: 2px solid #4A90E2;border-radius: 8px;background:none;">JOIN IN</button>
+      <button id="join-in">JOIN IN</button>
 
 
-    <div class="ctd-container" style="visibility:hidden"> <div class="ctd-loading"> <div class="ctd-bounce1"></div> <div class="ctd-bounce2"></div> <div class="ctd-bounce3"></div> </div> <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span> <ul class="cdt-details"> <li> <span class="cdt-number_of_contributors"></span> <span class="cdt-small">backers</span> </li> <li> <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span> <span class="cdt-small">of <span class="cdt-goal_dollars" data-format_money="$ :, :0:."></span></span> </li> <li> <span class="cdt-expiration_date" data-format_date="days_left"></span> <span class="cdt-small">days left</span> </li> </ul> <button class="cdt-btn" data-ct-checkout="crowdocracy.crowdocracy">Contribute now!</button> </div>
+      <div class="ctd-container">
+        <div class="ctd-loading">
+          <div class="ctd-bounce1"></div>
+          <div class="ctd-bounce2"></div>
+          <div class="ctd-bounce3"></div>
+        </div>
+        <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span>
+        <ul class="cdt-details">
+          <li>
+            <span class="cdt-number_of_contributors"></span>
+            <span class="cdt-small">backers</span>
+          </li>
+          <li>
+            <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span>
+            <span class="cdt-small">of
+              <span class="cdt-goal_dollars" data-format_money="$ :, :0:."></span>
+            </span>
+          </li>
+          <li>
+            <span class="cdt-expiration_date" data-format_date="days_left"></span>
+            <span class="cdt-small">days left</span>
+          </li>
+        </ul>
+        <button class="cdt-btn" data-ct-checkout="crowdocracy.crowdocracy">Contribute now!</button>
+      </div>
 
 
       <p>Or scroll to learn more...</p>
@@ -28,11 +54,11 @@
 
       <p>We’re exploring ideas to strengthen democracy and promote freedom.</p>
 
-      <p>
-        Digital voting,<br />
-        direct democracy,<br />
-        full transparency.
-      </p>
+      <ul id="cornerstones">
+        <li>Digital Voting,</li>
+        <li>Direct Democracy,</li>
+        <li>Full Transparency.</li>
+      </ul>
 
       <p>Built on the blockchain with smart contracts.</p>
 
@@ -40,36 +66,11 @@
 
       <p>Take part in a solution:</p>
 
-      <button style="font-size: 16.95px; color: #4A90E2; line-height: 20px; background: rgba(250,250,250,0.40); border: 2px solid #4A90E2; border-radius: 8px;">Come to our party.</button>
+      <button id="come-to-party">Come to our party.</button>
     </div>
-
-    <div class="ctd-container" style="visibility:hidden">
-      <div class="ctd-loading">
-        <div class="ctd-bounce1"></div>
-        <div class="ctd-bounce2"></div>
-        <div class="ctd-bounce3"></div>
-      </div>
-      <span class="cdt-bar" data-ctd-campaign="CMP1BC1BB872AE34C50A0E3CB95745D6F32"></span>
-      <ul class="cdt-details">
-        <li>
-          <span class="cdt-number_of_contributors"></span>
-          <span class="cdt-small">backers</span>
-        </li>
-        <li>
-          <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span>
-          <span class="cdt-small">of <span class="cdt-goal_dollars" data-format_money="$ :, :0:."></span></span>
-        </li>
-        <li>
-          <span class="cdt-expiration_date" data-format_date="days_left"></span> <span class="cdt-small">days left</span>
-        </li>
-      </ul>
-      <button class="cdt-btn" data-ct-checkout="crowdocracy.crowdocracy">Contribute now!</button>
-    </div>
-
 
     <script type="text/javascript" src="https://pro.tilt.com/checkout-1-3-0.js"></script>
     <script type="text/javascript" src="https://pro.tilt.com/crowdfunding-0-0-1.js"></script>
-
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

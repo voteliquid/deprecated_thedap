@@ -1,0 +1,41 @@
+body {
+  background-color: #D1DEEC;
+  color: #4A4A4A;
+  font-family: 'Athiti', serif;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/*#cornerstones > li {
+  list-style: none;
+}*/
+
+#join-in {
+  font-size: 16.95px;
+  color: #4A90E2;
+  line-height: 20px;
+  border: 2px solid #4A90E2;
+  border-radius: 8px;
+  background:none;
+}
+
+#come-to-party {
+  font-size: 16.95px;
+  color: #4A90E2;
+  line-height: 20px;
+  background: rgba(250,250,250,0.40);
+  border: 2px solid #4A90E2;
+  border-radius: 8px;
+}
+
+.ctd-container {
+  visibility: hidden;
+}
