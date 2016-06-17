@@ -8,6 +8,10 @@ class Home(r):
         context = {}
         self.render("index.html", **context)
 
+class Style(r):
+    def get(self):
+        context = {}
+        self.render("style/app.css", **context)
 
 class PageNotFound(r):
     def get(self):

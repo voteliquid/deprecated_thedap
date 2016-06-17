@@ -23,6 +23,7 @@ settings = {
 application = tornado.wsgi.WSGIApplication([   
 
     (r"/voting", voting.VotingModule),
+    (r"/style/app.css", homepage.Style),
     (r'.*', homepage.Home)
 
 ], **settings)
