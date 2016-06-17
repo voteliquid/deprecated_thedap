@@ -56,4 +56,5 @@ h3 {
 
 .ctd-container {
   visibility: hidden;
+  margin-left: -30px;
 }
