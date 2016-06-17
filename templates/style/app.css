@@ -7,6 +7,10 @@ body {
   margin: 0 auto;
 }
 
+div.page {
+  height: 667px;
+}
+
 h1 {
   font-size: 26px;
   line-height: 32px;
