@@ -9,6 +9,7 @@ body {
 
 div.page {
   height: 667px;
+  margin: 0 30px;
 }
 
 div.WelcomePage {
@@ -18,7 +19,7 @@ div.WelcomePage {
 h1 {
   font-size: 26px;
   line-height: 32px;
-  margin: 30px 30px 120px;
+  margin: 30px 0 120px;
   text-align: left;
 }
 
@@ -26,10 +27,6 @@ h3 {
   font-size: 16px;
   line-height: 18px;
 }
-
-/*#cornerstones > li {
-  list-style: none;
-}*/
 
 #join-in {
   font-size: 16.95px;
@@ -43,6 +40,8 @@ h3 {
   height: 50px;
 }
 
+
+
 #come-to-party {
   font-size: 16.95px;
   color: #4A90E2;
@@ -50,6 +49,9 @@ h3 {
   background: rgba(250,250,250,0.40);
   border: 2px solid #4A90E2;
   border-radius: 8px;
+  min-width: 315px;
+  height: 50px;
+  margin: 60px 0;
 }
 
 .ctd-container {
