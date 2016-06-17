@@ -14,35 +14,7 @@
 
       <h3>A 21st century experiment in democracy</h3>
 
-      <button id="join-in">JOIN IN</button>
-
-
-      <div class="ctd-container">
-        <div class="ctd-loading">
-          <div class="ctd-bounce1"></div>
-          <div class="ctd-bounce2"></div>
-          <div class="ctd-bounce3"></div>
-        </div>
-        <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span>
-        <ul class="cdt-details">
-          <li>
-            <span class="cdt-number_of_contributors"></span>
-            <span class="cdt-small">backers</span>
-          </li>
-          <li>
-            <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span>
-            <span class="cdt-small">of
-              <span class="cdt-goal_dollars" data-format_money="$ :, :0:."></span>
-            </span>
-          </li>
-          <li>
-            <span class="cdt-expiration_date" data-format_date="days_left"></span>
-            <span class="cdt-small">days left</span>
-          </li>
-        </ul>
-        <button class="cdt-btn" data-ct-checkout="crowdocracy.crowdocracy">Contribute now!</button>
-      </div>
-
+      <button id="join-in" onclick="scrollToPayment()">JOIN IN</button>
 
       <p>Or scroll to learn more...</p>
     </div>
@@ -66,8 +38,40 @@
 
       <p>Take part in a solution:</p>
 
-      <button id="come-to-party">Come to our party.</button>
+      <button id="come-to-party" onclick="scrollToPayment()">Come to our party.</button>
     </div>
+
+    <div class="ctd-container" id="payment-widget">
+      <div class="ctd-loading">
+        <div class="ctd-bounce1"></div>
+        <div class="ctd-bounce2"></div>
+        <div class="ctd-bounce3"></div>
+      </div>
+      <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span>
+      <ul class="cdt-details">
+        <li>
+          <span class="cdt-number_of_contributors"></span>
+          <span class="cdt-small">backers</span>
+        </li>
+        <li>
+          <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span>
+          <span class="cdt-small">of
+            <span class="cdt-goal_dollars" data-format_money="$ :, :0:."></span>
+          </span>
+        </li>
+        <li>
+          <span class="cdt-expiration_date" data-format_date="days_left"></span>
+          <span class="cdt-small">days left</span>
+        </li>
+      </ul>
+      <button class="cdt-btn" data-ct-checkout="crowdocracy.crowdocracy">Contribute now!</button>
+    </div>
+
+    <script>
+      function scrollToPayment() {
+        document.getElementById('payment-widget').scrollIntoView();
+      }
+    </script>
 
     <script type="text/javascript" src="https://pro.tilt.com/checkout-1-3-0.js"></script>
     <script type="text/javascript" src="https://pro.tilt.com/crowdfunding-0-0-1.js"></script>
