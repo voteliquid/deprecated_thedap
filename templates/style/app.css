@@ -3,6 +3,8 @@ body {
   color: #4A4A4A;
   font-family: 'Athiti', serif;
   font-weight: '500';
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 h1 {
