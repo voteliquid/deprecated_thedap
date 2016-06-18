@@ -5,7 +5,10 @@ body {
   font-weight: '500';
   max-width: 650px;
   margin: 0 auto;
-  letter-spacing: 0px !important;
+}
+
+h1, h2, h3 {
+  letter-spacing: -1px !important;
 }
 
 div.page {
