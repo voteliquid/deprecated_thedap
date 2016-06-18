@@ -63,6 +63,7 @@ h4 {
   height: 50px;
   margin: 30px auto;
   display: block;
+  text-transform: uppercase;
 }
 
 .button:hover {
@@ -77,7 +78,7 @@ h4 {
 }
 
 .tilt-button {
-  margin-top: 160px;
+  margin-top: 120px;
 }
 
 .less-padding {
