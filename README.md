@@ -1,4 +1,4 @@
-[![Join the chat at https://gitter.im/Crowdocracy/crowdocracy](https://badges.gitter.im/Crowdocracy/crowdocracy.svg)](https://gitter.im/Crowdocracy/crowdocracy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/Crowdocracy/thedap](https://badges.gitter.im/Crowdocracy/thedap.svg)](https://gitter.im/Crowdocracy/thedap?utm_source=badge&utm_medium=badge&utm_content=badge)
 
 The intention of Crowdocracy is to allow people to vote on life-affecting group decisions, with sights on the largest decisions like government elections and tax spending.
 

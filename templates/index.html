@@ -4,6 +4,10 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Athiti:400,500">
     <link rel="stylesheet" type="text/css" href="style/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="The DAP"/>
+    <meta property="og:url" content="https://thedap.org"/>
+    <meta property="og:description" content="A 21st century experiment in democracy"/>
+    <meta property="og:image" content="https://cloud.githubusercontent.com/assets/6340841/16167934/e43b3376-34b0-11e6-9a48-427b1f56897e.png"/>
   </head>
 
   <body>
@@ -16,9 +20,9 @@
 
       <h3>A 21st century experiment in democracy</h3>
 
-      <button class="button" id="join-in" onclick="scrollToPayment()">JOIN IN</button>
+      <button class="button" id="join-in" onclick="scrollToPayment()">Let's party</button>
 
-      <p>Or scroll to learn more...</p>
+      <p class="scrollToLearn">Or scroll to learn more...</p>
     </div>
 
     <div class="MoreInfoPage page">
@@ -36,11 +40,11 @@
 
       <p>Built on the blockchain with smart contracts.</p>
 
-      <h4>We’re all in this together</h4>
+      <h4>We’re all in this together.</h4>
 
       <p>Take part in a solution:</p>
 
-      <button class="button" id="come-to-party" onclick="scrollToPayment()">Come to our party.</button>
+      <button class="button" id="come-to-party" onclick="scrollToPayment()">Come to the party.</button>
     </div>
 
     <div class="page" id="payment-widget">
@@ -64,16 +68,20 @@
         <ul class="cdt-details"> 
             <li> 
                 <span class="cdt-number_of_contributors"></span> 
-                <span class="cdt-small">backers</span> </li> 
+                <span class="cdt-small">partiers</span> 
+            </li> 
             <li> 
                 <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span> 
                 <span class="cdt-small">of 
-                    <span class="cdt-goal_dollars" data-format_money="$ :, :0:."></span></span> </li> 
+                    <span>$2,700</span>
+                </span> 
+                </li> 
             <li> 
                 <span class="cdt-expiration_date" data-format_date="days_left"></span> 
-                <span class="cdt-small">days left</span> </li> </ul> 
-
-                <button class="cdt-btn" data-ct-checkout="crowdocracy.the-dap">Join now!</button> 
+                <span class="cdt-small">days left</span> 
+            </li> 
+        </ul> 
+        <button class="cdt-btn" data-ct-checkout="crowdocracy.the-dap">Just take my money!</button> 
         </div>
     </div>
 
