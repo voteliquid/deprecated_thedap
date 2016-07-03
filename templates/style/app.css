@@ -84,3 +84,7 @@ h4 {
 .less-padding {
   padding: 20px 6px !important;
 }
+
+#payment-widget {
+  display: none;
+}
