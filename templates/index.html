@@ -4,6 +4,9 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Athiti:400,500">
     <link rel="stylesheet" type="text/css" href="style/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="The DAP"/>
+    <meta property="og:url" content="https://thedap.org"/>
+    <meta property="og:description" content="A 21st century experiment in democracy"/>
     <meta property="og:image" content="https://cloud.githubusercontent.com/assets/6340841/16167934/e43b3376-34b0-11e6-9a48-427b1f56897e.png"/>
   </head>
 
@@ -41,8 +44,12 @@
 
       <p>Take part in a solution:</p>
 
-      <button class="button" id="come-to-party" onclick="scrollToPayment()">Come to the party.</button>
+      <!-- <button class="button" id="come-to-party" onclick="scrollToPayment()">Come to the party.</button> -->
+      <form action="https://docs.google.com/forms/d/1JomhpZFc0AojjUBUW9W1XS80klNwHkOKXxkCoVclNsc/formResponse" target="_self" method="POST" id="mG61Hd">
+        <input class="button" type="submit" value="sign up"></input>
+      </form>
     </div>
+
 
     <div class="page" id="payment-widget">
       <h2>Come to our Party — July 23rd</h2>
@@ -55,34 +62,34 @@
         <li>bragging rights of historic proportions</li>
       </ul>
 
-      <div class="ctd-container">
-        <div class="ctd-loading">
-          <div class="ctd-bounce1"></div>
-          <div class="ctd-bounce2"></div>
-          <div class="ctd-bounce3"></div>
+        <div class="ctd-container">
+           <div class="ctd-loading"> 
+            <div class="ctd-bounce1"></div> 
+            <div class="ctd-bounce2"></div> 
+            <div class="ctd-bounce3"></div> 
+        </div> 
+        <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span> 
+        <ul class="cdt-details"> 
+            <li> 
+                <span class="cdt-number_of_contributors"></span> 
+                <span class="cdt-small">partiers</span> 
+            </li> 
+            <li> 
+                <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span> 
+                <span class="cdt-small">of 
+                    <span>$2,700</span>
+                </span> 
+                </li> 
+            <li> 
+                <span class="cdt-expiration_date" data-format_date="days_left"></span> 
+                <span class="cdt-small">days left</span> 
+            </li> 
+        </ul> 
+        <button class="button tilt-button" data-ct-checkout="crowdocracy.the-dap">Just take my money!</button>
         </div>
-        <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span>
-        <ul class="cdt-details">
-          <li>
-            <span class="cdt-number_of_contributors"></span>
-            <span class="cdt-small">partiers</span>
-          </li>
-          <li class="less-padding">
-            <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span>
-            <span class="cdt-small">of
-              <span>$2,700</span>
-            </span>
-          </li>
-          <li>
-            <span class="cdt-expiration_date" data-format_date="days_left"></span>
-            <span class="cdt-small">days left</span>
-          </li>
-        </ul>
-        <button class="button tilt-button" data-ct-checkout="crowdocracy.crowdocracy">Just take my money!</button>
-      </div>
-
-      <p class="question"><a href="https://gitter.im/Crowdocracy/thedap">? — Ask a Question</a></p>
+      <p class="question"><a href="https://gitter.im/Crowdocracy/thedap">Ask a Question | Join the Conversation</a></p>
     </div>
+
 
     <script>
       function scrollToPayment() {
