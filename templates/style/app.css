@@ -53,6 +53,7 @@ h4 {
 }
 
 .button {
+  cursor: pointer;
   font-size: 16.95px;
   color: #4A90E2;
   line-height: 20px;
@@ -81,14 +82,19 @@ h4 {
   margin-top: 120px;
 }
 
-.question {
-  text-align: center;
-}
-
 .less-padding {
   padding: 20px 6px !important;
 }
 
 #payment-widget {
   display: none;
+}
+
+#sign-up {
+  color: red;
+  border: 2px solid red;
+}
+
+.center {
+  text-align: center;
 }
