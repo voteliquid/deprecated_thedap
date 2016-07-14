@@ -1,63 +1,61 @@
 import tornado
 from base import RequestHandler as R
-import random
-import logging
+from google.appengine.ext import db
 import json
+import logging
+
+from models.user import DAP, User, Proposal
 
 
-class Authenticate(R):
-   def post(self):
-        packet = json.loads(self.request.body)
-        logging.info(packet)
 
-        user = self.from_email(packet["email"])
-
-        if user.check_password(packet["password"]):
-            self.set_status(200)
-            resp = {"success":True, "error":""}
-        else:
-            self.set_status(400)
-            resp = {"success":False, "error":str(sys.exc_info())}            
-        
-        self.write(json.dumps(resp))
-        return 
 
 
 class ListProposals(R):
     @tornado.web.authenticated
-    def post(self):
-        packet = json.loads(self.request.body)
-        logging.info(packet)
+    def get(self):
+        dap_key_str = self.get_argument("dap")
+        dap = db.get(dap_key_str)
 
-        user = self.from_email(packet["email"])
-
-        if user.check_password(packet["password"]):
-            self.set_status(200)
-            resp = {"success":True, "error":""}
-        else:
-            self.set_status(400)
-            resp = {"success":False, "error":str(sys.exc_info())}            
-        
-        self.write(json.dumps(resp))
-        return 
+        proposals = []
+        for p in dap.proposals:
+            proposals.append({"proposal_text":p.proposal_text,
+                             "cost":p.cost,
+                             "client_timestamp":p.client_timestamp,
+                             "user":p.user.key(),
+                             "dap":p.dap.key()
+                             })
+        self.set_status(200)
+        self.write(json.dumps(proposals))
 
 
 class CreateProposal(R):
     @tornado.web.authenticated
     def post(self):
-        packet = json.loads(self.request.body)
-        logging.info(packet)
+        data = json.loads(self.get_arguments)
+        logging.info(data)  
 
-        user = self.from_email(packet["email"])
+        p = Proposal(**data)
+        p.put()
+        self.set_status(200)
 
-        if user.check_password(packet["password"]):
+
+class Authenticate(R):
+    """TODO: this needs to be refactored to be more secure, e.g. stopping multiple password check attempts"""
+    def get(self):
+        data = json.loads(self.get_arguments)
+        logging.info(data)
+
+        user = self.from_email(data["email"])
+
+        if user.check_password(data["password"]):
+            #set secure cookie
+            self.set_secure_cookie("user", str(user.key()))
             self.set_status(200)
             resp = {"success":True, "error":""}
         else:
             self.set_status(400)
-            resp = {"success":False, "error":str(sys.exc_info())}            
-        
+            resp = {"success":False, "error":"Could not authenticate user"}            
+
         self.write(json.dumps(resp))
-        return 
 
-
+        

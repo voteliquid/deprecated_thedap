@@ -9,12 +9,8 @@ class Home(R):
         context = {}
         self.render("index.html", **context)
 
-class Style(R):
-    def get(self):
-        context = {}
-        self.render("style/app.css", **context)
 
-class PageNotFound(R):
+class Login(R):
     def get(self):
         context = {}
-        self.render("basic/404_not_found.html", **context)
+        self.render("login.html", **context)
