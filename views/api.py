@@ -18,9 +18,10 @@ class ListProposals(R):
 
         proposals = []
         for p in dap.proposals:
-            proposals.append({"proposal_text":p.proposal_text,
+            proposals.append({"proposal_title":p.proposal_title,
+                             "proposal_text":p.proposal_text,
                              "cost":p.cost,
-                             "client_timestamp":p.client_timestamp,
+                             "timestamp":.p.created.strftime("%d/%m/%Y %H:%M:%S"),
                              "user":p.user.key(),
                              "dap":p.dap.key()
                              })
@@ -31,12 +32,27 @@ class ListProposals(R):
 class CreateProposal(R):
     @tornado.web.authenticated
     def post(self):
-        data = json.loads(self.get_arguments)
+        data = json.loads(self.request.body)
         logging.info(data)  
 
-        p = Proposal(**data)
+        p = Proposal(
+                     proposal_title=data["proposal_title"],
+                     proposal_text=data["proposal_text"],
+                     cost=float(data["cost"]),
+                     dap=db.get(data["dap"]),
+                     user=str(self.get_current_user().key())
+                    )
         p.put()
+
+        r = {"proposal_title":p.proposal_title,
+             "proposal_text":p.proposal_text,
+             "cost":p.cost,
+             "timestamp":.p.created.strftime("%d/%m/%Y %H:%M:%S"),
+             "user":p.user.key(),
+             "dap":p.dap.key()
+             })
         self.set_status(200)
+        self.write(json.dumps(r))
 
 
 class Authenticate(R):

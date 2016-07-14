@@ -28,9 +28,9 @@ class User(BaseModel):
 
 
 class Proposal(BaseModel):
+    proposal_title = db.StringProperty()
     proposal_text = db.StringProperty()
     cost = db.FloatProperty()
-    client_timestamp = db.DateTimeProperty()
     #collected properties
     user = db.ReferenceProperty(User, collection_name='proposals')
     dap = db.ReferenceProperty(DAP, collection_name='proposals')
