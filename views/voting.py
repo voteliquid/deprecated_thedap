@@ -1,11 +1,11 @@
-from tornado.web import RequestHandler as r
+from base import RequestHandler as R
 import random
 import logging
 
 from pyvotecore.schulze_pr import SchulzePR
 
 
-class VotingModule(r):
+class VotingModule(R):
     def get(self):
         ballots = [
             {"count": 6, "ballot": [["a"], ["d"], ["b"], ["c"], ["e"]]},
