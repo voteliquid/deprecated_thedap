@@ -11,7 +11,6 @@ from models.user import DAP, User, Proposal
 
 
 class ListProposals(R):
-    @tornado.web.authenticated
     def get(self):
         dap_key_str = self.get_argument("dap")
         dap = db.get(dap_key_str)
