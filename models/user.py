@@ -1,5 +1,4 @@
 from google.appengine.ext import db
-import models.util.properties
 from Crypto.Hash import SHA256
 
 

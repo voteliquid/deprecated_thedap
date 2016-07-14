@@ -1,12 +1,8 @@
-import sys
 import tornado
 from google.appengine.ext.db import GqlQuery #for BaseHandler.get_user on Google App Engine.
 from google.appengine.ext import db
-from models.user import User, Doctor, random_sha
-import json
+from models.user import User
 
-import logging
-logging.basicConfig(level=logging.DEBUG)
 
 
 
@@ -32,7 +28,6 @@ class RequestHandler(tornado.web.RequestHandler):
                 first_and = False
             else:
                 query_text+=" AND " + key + " = :" + key
-        logging.info(query_text)
         query = db.GqlQuery(query_text, **params_dict)
         return query
 
