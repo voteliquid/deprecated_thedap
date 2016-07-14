@@ -13,7 +13,7 @@
   <body>
 
     <div class="WelcomePage page">
-      <h1>Distributed<br/ >
+      <h1>Decentralized<br/ >
         Autonomous<br />
         <del>Party</del> BoatyMcBoatface
       </h1>
@@ -22,11 +22,11 @@
 
       <button class="button" id="join-in" onclick="scrollToPayment()">Let's party</button>
 
-      <p class="scrollToLearn">Or scroll to learn more...</p>
+      <!-- <p class="scrollToLearn">Or scroll to learn more...</p> -->
     </div>
 
     <div class="MoreInfoPage page">
-      <h2>Pivotal Time in Human History</h2>
+      <h2 id="pivotal-time">Pivotal Time in Human History</h2>
 
       <p>A lot of people feel like the current system isn’t working for them.</p>
 
@@ -44,8 +44,14 @@
 
       <p>Take part in a solution:</p>
 
-      <button class="button" id="come-to-party" onclick="scrollToPayment()">Come to the party.</button>
+      <!-- <button class="button" id="come-to-party" onclick="scrollToPayment()">Come to the party.</button> -->
+      <form action="https://docs.google.com/forms/d/1JomhpZFc0AojjUBUW9W1XS80klNwHkOKXxkCoVclNsc/formResponse" target="_self" method="POST" id="mG61Hd">
+        <input class="button" id="sign-up" type="submit" value="sign up"></input>
+      </form>
+      <p class="center">&mdash; AND THEN &mdash;</p>
+      <input class="button" id="join-convo" type="submit" value="Join the Conversation" onclick="window.location='https://gitter.im/Crowdocracy/thedap'" target="_blank" />
     </div>
+
 
     <div class="page" id="payment-widget">
       <h2>Come to our Party — July 23rd</h2>
@@ -59,36 +65,35 @@
       </ul>
 
         <div class="ctd-container">
-           <div class="ctd-loading"> 
-            <div class="ctd-bounce1"></div> 
-            <div class="ctd-bounce2"></div> 
-            <div class="ctd-bounce3"></div> 
-        </div> 
-        <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span> 
-        <ul class="cdt-details"> 
-            <li> 
-                <span class="cdt-number_of_contributors"></span> 
-                <span class="cdt-small">partiers</span> 
-            </li> 
-            <li> 
-                <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span> 
-                <span class="cdt-small">of 
+           <div class="ctd-loading">
+            <div class="ctd-bounce1"></div>
+            <div class="ctd-bounce2"></div>
+            <div class="ctd-bounce3"></div>
+        </div>
+        <span class="cdt-bar" data-ctd-campaign="CMPF97A9587859A43DB930A3D7F84BA6489"></span>
+        <ul class="cdt-details">
+            <li>
+                <span class="cdt-number_of_contributors"></span>
+                <span class="cdt-small">partiers</span>
+            </li>
+            <li>
+                <span class="cdt-raised_amount" data-format_money="$ :, :0:."></span>
+                <span class="cdt-small">of
                     <span>$2,700</span>
-                </span> 
-                </li> 
-            <li> 
-                <span class="cdt-expiration_date" data-format_date="days_left"></span> 
-                <span class="cdt-small">days left</span> 
-            </li> 
-        </ul> 
+                </span>
+                </li>
+            <li>
+                <span class="cdt-expiration_date" data-format_date="days_left"></span>
+                <span class="cdt-small">days left</span>
+            </li>
+        </ul>
         <button class="button tilt-button" data-ct-checkout="crowdocracy.the-dap">Just take my money!</button>
         </div>
     </div>
 
-
     <script>
       function scrollToPayment() {
-        var payment = document.getElementById('payment-widget');
+        var payment = document.getElementById('pivotal-time');
         zenscroll.to(payment);
       }
     </script>

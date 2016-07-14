@@ -1,0 +1,121 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# dap
+
+DAP provides a simple API allowing consumers to create, view, and vote in proposals, as well as create a user profile.
+
+## Proposals Collection [/proposals]
+
+### List All Proposals [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "cost": 20000,
+                "proposal": "Rent out Alcatraz.",
+                "created_at": "2016-08-18T20:32:27.813Z",
+            }
+        ]
+
+### Create a New Proposal [POST]
+
+You may create your own proposal using this action. It takes a JSON
+object containing a proposal and a cost in USD.
+
++ Request (application/json)
+
+        {
+            "cost": 20000,
+            "proposal": "Rent out Alcatraz."
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /proposals/31
+
+    + Body
+
+            {
+                "cost": 20000
+                "proposal": "Rent out Alcatraz.",
+                "created_at": "2016-08-18T20:32:27.813Z",
+            }
+
+## Users Collection [/users]
+
+### Create a New User [POST]
+
++ Request (application/json)
+
+        {
+            "city": "San Francisco",
+            "country": "USA",
+            "ethereum_wallet": "9x87x8ja98w3jkljaklwjjasdf89y23hzxc812aiowji",
+            "password": "saltedHashX1337password"
+            "username": "dapmasterdex",
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/dapmasterdex
+
+    + Body
+
+            {
+                "city": "San Francisco",
+                "country": "USA",
+                "created_at": "2016-08-09T05:19:02.289Z",
+                "ethereum_wallet": "9x87x8ja98w3jkljaklwjjasdf89y23hzxc812aiowji",
+                "public_key" "89asdfh9832ashd78f9asdf_a9h7fa23k",
+                "username": "dapmasterdex"
+            }
+
+## Votes Collection [/votes]
+
+### List All Votes [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "cost": 20000
+                "created_at": "2016-08-18T20:32:27.813Z",
+                "username": "dapmasterdex",
+                "proposal": "Rent out Alcatraz.",
+            }
+        ]
+
+### Submit a Vote [POST]
+
+You may submit a vote and update it again at any time.
+
++ Request (application/json)
+
+        {
+            "proposal_id": 31,
+            "dap_id": 1,
+            "username": "dapmasterdex",
+            "vote": true
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/dapmasterdex/votes/31
+
+    + Body
+
+            {
+                "created_at": "2016-08-20T10:23:41.734Z",
+                "proposal_id": 31,
+                "updated_at": "2016-08-21T03:29:11.007Z"
+                "username": "dapmasterdex",
+                "vote": true
+            }
